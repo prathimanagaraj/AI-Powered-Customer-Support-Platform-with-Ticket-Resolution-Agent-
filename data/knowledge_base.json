@@ -1,0 +1,44 @@
+[
+  {
+    "id": "KB001",
+    "title": "VPN Troubleshooting Guide",
+    "category": "Network Connectivity",
+    "content": "For VPN connection failures, verify that the corporate firewall allows VPN traffic on the required ports. Check the VPN client configuration, including the correct server address and authentication method. Restart the VPN client and clear cached credentials. If the issue continues, test the VPN connection from another network to determine whether the problem is network-specific."
+  },
+  {
+    "id": "KB002",
+    "title": "Network Firewall Configuration",
+    "category": "Network Security",
+    "content": "Corporate firewall policies must allow approved VPN traffic. Check whether VPN ports are blocked by the firewall. Review firewall rules and confirm that required inbound and outbound traffic is permitted according to the organization's network policy."
+  },
+  {
+  "id": "KB005",
+  "title": "Email Troubleshooting Guide",
+  "category": "Email",
+  "content": "For email issues, first check the internet connection and verify that the email service is available. Confirm that the email account is configured correctly. Check the incoming and outgoing mail server settings. Restart the email application and try sending or receiving an email again."
+},
+{
+  "id": "KB006",
+  "title": "Email Login and Authentication",
+  "category": "Email Authentication",
+  "content": "If the user cannot access their email account, verify the username and password. Check whether the account is locked or requires authentication. Reset the password if necessary and sign in again."
+},
+{
+  "id": "KB007",
+  "title": "Email Sending and Receiving Problems",
+  "category": "Email",
+  "content": "If emails cannot be sent or received, check the network connection and email server settings. Verify that the mailbox is not full. Restart the email client and test the account again."
+},
+  {
+    "id": "KB003",
+    "title": "VPN Client Configuration",
+    "category": "VPN",
+    "content": "Verify that the VPN client uses the correct corporate VPN server address and authentication method. Check the username and authentication settings. Restart the VPN client after making configuration changes."
+  },
+  {
+    "id": "KB004",
+    "title": "VPN Cached Credentials",
+    "category": "Authentication",
+    "content": "If VPN authentication fails, clear cached credentials from the VPN client and sign in again using valid corporate credentials. Restart the VPN client after clearing the cached information."
+  }
+]
