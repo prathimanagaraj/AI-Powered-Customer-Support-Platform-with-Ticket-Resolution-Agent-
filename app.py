@@ -13,9 +13,10 @@ from classifier import (
 )
 
 from rag.pipeline import run_rag_pipeline
-
+from agents import MultiAgentOrchestrator
 
 app = Flask(__name__)
+orchestrator = MultiAgentOrchestrator()
 
 # Secret key for login session
 app.secret_key = "supportpilot-secret-key"
@@ -87,8 +88,6 @@ def logout():
 
 @app.route("/submit", methods=["POST"])
 def submit_ticket():
-
-    # Make sure user is logged in
     if "logged_in" not in session:
         return redirect("/login")
 
@@ -98,40 +97,14 @@ def submit_ticket():
     description = request.form["description"]
     department = request.form["department"]
 
+    # -----------------------------
+    # M1: AI Ticket Classification
+    # -----------------------------
+    category, confidence = classify_ticket(title, description)
+    severity = predict_severity(title, description)
+    priority = assign_priority(severity)
 
-    # =====================================================
-    # AI CLASSIFICATION
-    # =====================================================
-
-    category, confidence = classify_ticket(
-        title,
-        description
-    )
-
-
-    # =====================================================
-    # SEVERITY
-    # =====================================================
-
-    severity = predict_severity(
-        title,
-        description
-    )
-
-
-    # =====================================================
-    # PRIORITY
-    # =====================================================
-
-    priority = assign_priority(
-        severity
-    )
-
-
-    # =====================================================
-    # SAVE TICKET
-    # =====================================================
-
+    # Store ticket in database
     ticket_id = add_ticket(
         employee_name,
         email,
@@ -139,11 +112,6 @@ def submit_ticket():
         description,
         department
     )
-
-
-    # =====================================================
-    # SAVE AI RESULTS
-    # =====================================================
 
     update_ticket_prediction(
         ticket_id,
@@ -153,40 +121,34 @@ def submit_ticket():
         confidence
     )
 
-
-    # =====================================================
-    # MILESTONE 2 - RAG PIPELINE
-    # =====================================================
-
+    # -----------------------------
+    # M2 + M3: RAG + Multi-Agent
+    # -----------------------------
     rag_result = run_rag_pipeline(
         title,
         description
     )
 
-
-    # =====================================================
-    # SHOW RESULT PAGE
-    # =====================================================
-
-    return render_template(
-        "result.html",
-
-        ticket_id=ticket_id,
-
-        employee_name=employee_name,
-
-        category=category,
-
-        confidence=confidence,
-
-        severity=severity,
-
-        priority=priority,
-
-        rag_result=rag_result
+    m3_result = orchestrator.run(
+        title,
+        description,
+        email
     )
 
-
+    # -----------------------------
+    # Display result
+    # -----------------------------
+    return render_template(
+        "result.html",
+        ticket_id=ticket_id,
+        employee_name=employee_name,
+        category=category,
+        confidence=confidence,
+        severity=severity,
+        priority=priority,
+        rag_result=rag_result,
+        m3_result=m3_result
+    )
 # =========================================================
 # RUN APPLICATION
 # =========================================================
