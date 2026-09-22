@@ -15,152 +15,102 @@
           rel="stylesheet">
 
     <style>
-        /* ================= SIDEBAR ================= */
-
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 190px;
-    height: 100vh;
-    background: #ffffff;
-    border-right: 1px solid #e6e4ef;
-    padding: 22px 14px;
-    z-index: 1000;
-}
-
-.sidebar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 5px 8px 25px;
-    border-bottom: 1px solid #eeeaf5;
-}
-
-.brand-logo {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    background: #7c3aed;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    font-weight: 800;
-}
-
-.sidebar-brand strong {
-    color: #30304d;
-    font-size: 13px;
-}
-
-
-/* ================= MENU ================= */
-
-.sidebar-menu {
-    margin-top: 22px;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    padding: 11px 12px;
-    margin-bottom: 7px;
-    border-radius: 8px;
-    color: #73758a;
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-    transition: 0.2s;
-}
-
-.menu-item span {
-    width: 18px;
-    text-align: center;
-    font-size: 13px;
-}
-
-.menu-item:hover {
-    background: #f5f3ff;
-    color: #6d28d9;
-}
-
-.menu-item.active {
-    background: #f1edff;
-    color: #6d28d9;
-    font-weight: 700;
-}
-
-
-/* ================= MAIN AREA ================= */
-
-body {
-    padding-left: 190px;
-}
-
-.topbar {
-    background: #f3e8ff;
-    border-bottom: 1px solid #e5d9ff;
-}
-
-.main-container {
-    max-width: 1150px;
-    margin: auto;
-    padding: 30px 25px 50px;
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 700px) {
-
-    .sidebar {
-        width: 65px;
-        padding: 18px 8px;
-    }
-
-    .sidebar-brand {
-        justify-content: center;
-        border-bottom: none;
-    }
-
-    .sidebar-brand strong {
-        display: none;
-    }
-
-    .menu-item {
-        justify-content: center;
-        padding: 11px 5px;
-    }
-
-    .menu-item span {
-        font-size: 16px;
-    }
-
-    .menu-item {
-        font-size: 0;
-    }
-
-    body {
-        padding-left: 65px;
-    }
-
-}
 
         * {
             box-sizing: border-box;
         }
 
+        /* ================= BODY ================= */
+
         body {
             margin: 0;
+            padding-left: 190px;
             font-family: 'Inter', sans-serif;
             background: #f5f3ff;
             color: #172033;
         }
 
-        /* ================= HEADER ================= */
+
+        /* ================= SIDEBAR ================= */
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 190px;
+            height: 100vh;
+            background: #ffffff;
+            border-right: 1px solid #e6e4ef;
+            padding: 22px 14px;
+            z-index: 1000;
+        }
+
+        .sidebar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 8px 25px;
+            border-bottom: 1px solid #eeeaf5;
+        }
+
+        .brand-logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: #7c3aed;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .sidebar-brand strong {
+            color: #30304d;
+            font-size: 13px;
+        }
+
+
+        /* ================= MENU ================= */
+
+        .sidebar-menu {
+            margin-top: 22px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            padding: 11px 12px;
+            margin-bottom: 7px;
+            border-radius: 8px;
+            color: #73758a;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .menu-item span {
+            width: 18px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .menu-item:hover {
+            background: #f5f3ff;
+            color: #6d28d9;
+        }
+
+        .menu-item.active {
+            background: #f1edff;
+            color: #6d28d9;
+            font-weight: 700;
+        }
+
+
+        /* ================= TOPBAR ================= */
 
         .topbar {
             background: #f3e8ff;
@@ -197,6 +147,7 @@ body {
             font-weight: 700;
         }
 
+
         /* ================= MAIN ================= */
 
         .main-container {
@@ -204,6 +155,7 @@ body {
             margin: auto;
             padding: 35px 20px 50px;
         }
+
 
         /* ================= PAGE TITLE ================= */
 
@@ -225,6 +177,7 @@ body {
             font-size: 13px;
         }
 
+
         /* ================= SUCCESS ================= */
 
         .success-box {
@@ -238,6 +191,7 @@ body {
             text-align: center;
             font-size: 13px;
         }
+
 
         /* ================= CARD ================= */
 
@@ -273,6 +227,7 @@ body {
             padding: 20px;
         }
 
+
         /* ================= TICKET DETAILS ================= */
 
         .ticket-grid {
@@ -303,6 +258,7 @@ body {
             font-size: 14px;
             font-weight: 700;
         }
+
 
         /* ================= RAG WORKFLOW ================= */
 
@@ -350,6 +306,7 @@ body {
             font-size: 9px;
             font-weight: 700;
         }
+
 
         /* ================= RETRIEVED DOCUMENTS ================= */
 
@@ -406,6 +363,7 @@ body {
             line-height: 1.7;
         }
 
+
         /* ================= RESOLUTION ================= */
 
         .resolution-box {
@@ -442,6 +400,265 @@ body {
             font-size: 10px;
         }
 
+
+        /* =====================================================
+           MILESTONE 3 - MULTI AGENT WORKFLOW
+        ===================================================== */
+
+        .m3-section {
+            background: #ffffff;
+            border: 1px solid #e7e3f4;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(50, 40, 90, 0.08);
+            margin-top: 30px;
+            margin-bottom: 25px;
+            padding: 32px 28px;
+        }
+
+
+        /* M3 HEADER */
+
+        .m3-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .m3-header h2 {
+            margin: 0;
+            color: #26365f;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .m3-header p {
+            margin: 8px 0 0;
+            color: #7b86a8;
+            font-size: 13px;
+        }
+
+
+        /* M3 AGENT GRID */
+
+        .m3-workflow {
+            display: grid;
+            grid-template-columns: 1fr 35px 1fr 35px 1fr 35px 1fr;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        /* M3 AGENT CARD */
+
+        .m3-agent {
+            min-height: 165px;
+            border-radius: 17px;
+            padding: 22px 12px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background: #ffffff;
+            box-shadow: 0 7px 20px rgba(50, 40, 90, 0.06);
+        }
+
+
+        /* Individual agent colors */
+
+        .m3-agent.diagnosis {
+            background: #f7f9ff;
+            border: 1px solid #cbdcff;
+        }
+
+        .m3-agent.retrieval {
+            background: #faf7ff;
+            border: 1px solid #ddd1ff;
+        }
+
+        .m3-agent.resolution {
+            background: #f5fffc;
+            border: 1px solid #bce9df;
+        }
+
+        .m3-agent.validation {
+            background: #fff7ff;
+            border: 1px solid #edc9eb;
+        }
+
+
+        /* Agent icon */
+
+        .m3-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 27px;
+            margin-bottom: 13px;
+        }
+
+        .diagnosis .m3-icon {
+            background: #dce8ff;
+        }
+
+        .retrieval .m3-icon {
+            background: #e7ddff;
+        }
+
+        .resolution .m3-icon {
+            background: #d5f4ec;
+        }
+
+        .validation .m3-icon {
+            background: #f4d9f0;
+        }
+
+
+        /* Agent title */
+
+        .m3-agent h3 {
+            margin: 0 0 12px;
+            color: #26365f;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+
+        /* Completed badge */
+
+        .m3-status {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .3px;
+        }
+
+        .diagnosis .m3-status {
+            background: #dce8ff;
+            color: #2563eb;
+        }
+
+        .retrieval .m3-status {
+            background: #e6ddff;
+            color: #635bce;
+        }
+
+        .resolution .m3-status {
+            background: #d7f4ec;
+            color: #059669;
+        }
+
+        .validation .m3-status {
+            background: #f2d9ee;
+            color: #a23d96;
+        }
+
+
+        /* Arrows */
+
+        .m3-arrow {
+            text-align: center;
+            color: #8b82d6;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           M3 VALIDATION / ACTION
+        ===================================================== */
+
+        .m3-result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 28px;
+        }
+
+        .m3-result-card {
+            background: #f8f7ff;
+            border: 1px solid #e5defc;
+            border-radius: 14px;
+            padding: 17px;
+            text-align: center;
+        }
+
+        .m3-result-card .result-label {
+            display: block;
+            color: #8a91a2;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .4px;
+            margin-bottom: 7px;
+        }
+
+        .m3-result-card .result-value {
+            color: #4338ca;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+
+        /* Confidence */
+
+        .m3-confidence {
+            background: #eef2ff;
+            border-color: #c7d2fe;
+        }
+
+        .m3-confidence .result-value {
+            color: #4338ca;
+        }
+
+
+        /* Decision */
+
+        .m3-decision {
+            background: #f5f3ff;
+        }
+
+        .m3-decision .result-value {
+            color: #6d28d9;
+            font-size: 14px;
+        }
+
+
+        /* Action */
+
+        .m3-action {
+            background: #ecfdf5;
+            border-color: #a7f3d0;
+        }
+
+        .m3-action .result-value {
+            color: #047857;
+            font-size: 14px;
+        }
+
+
+        /* M3 action message */
+
+        .m3-action-message {
+            margin-top: 18px;
+            padding: 13px 16px;
+            background: #faf9ff;
+            border: 1px solid #e8e3f4;
+            border-radius: 11px;
+            color: #626b7d;
+            font-size: 11px;
+            text-align: center;
+        }
+
+
         /* ================= CONTEXT ================= */
 
         .context-box {
@@ -457,7 +674,8 @@ body {
             white-space: pre-wrap;
         }
 
-        /* ================= BUTTONS ================= */
+
+        /* ================= BUTTON ================= */
 
         .button-area {
             text-align: center;
@@ -482,6 +700,7 @@ body {
             transform: translateY(-1px);
         }
 
+
         /* ================= FOOTER ================= */
 
         .footer {
@@ -491,7 +710,26 @@ body {
             font-size: 10px;
         }
 
+
         /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 950px) {
+
+            .m3-workflow {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .m3-arrow {
+                display: none;
+            }
+
+            .m3-result-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
 
         @media (max-width: 800px) {
 
@@ -504,6 +742,40 @@ body {
             }
 
         }
+
+
+        @media (max-width: 700px) {
+
+            .sidebar {
+                width: 65px;
+                padding: 18px 8px;
+            }
+
+            .sidebar-brand {
+                justify-content: center;
+                border-bottom: none;
+            }
+
+            .sidebar-brand strong {
+                display: none;
+            }
+
+            .menu-item {
+                justify-content: center;
+                padding: 11px 5px;
+                font-size: 0;
+            }
+
+            .menu-item span {
+                font-size: 16px;
+            }
+
+            body {
+                padding-left: 65px;
+            }
+
+        }
+
 
         @media (max-width: 550px) {
 
@@ -524,13 +796,24 @@ body {
                 flex-direction: column;
             }
 
+            .m3-section {
+                padding: 25px 15px;
+            }
+
+            .m3-workflow {
+                grid-template-columns: 1fr;
+            }
+
         }
 
     </style>
 
 </head>
 
+
 <body>
+
+
 <!-- ================= SIDEBAR ================= -->
 
 <aside class="sidebar">
@@ -585,6 +868,7 @@ body {
 </aside>
 
 
+
 <!-- ================= HEADER ================= -->
 
 <header class="topbar">
@@ -602,6 +886,7 @@ body {
     </div>
 
 </header>
+
 
 
 <!-- ================= MAIN ================= -->
@@ -622,6 +907,7 @@ body {
     </div>
 
 
+
     <!-- SUCCESS -->
 
     <div class="success-box">
@@ -633,6 +919,7 @@ body {
     </div>
 
 
+
     <!-- ================= TICKET INFORMATION ================= -->
 
     <section class="card-box">
@@ -641,9 +928,12 @@ body {
 
             <h3>🎫 Ticket Information</h3>
 
-            <p>Basic information and AI classification of the submitted ticket</p>
+            <p>
+                Basic information and AI classification of the submitted ticket
+            </p>
 
         </div>
+
 
         <div class="card-body-custom">
 
@@ -723,6 +1013,7 @@ body {
     </section>
 
 
+
     <!-- ================= RAG WORKFLOW ================= -->
 
     <section class="card-box">
@@ -737,12 +1028,11 @@ body {
 
         </div>
 
+
         <div class="card-body-custom">
 
             <div class="workflow">
 
-
-                <!-- STEP 1 -->
 
                 <div class="workflow-step">
 
@@ -757,8 +1047,6 @@ body {
                 </div>
 
 
-                <!-- STEP 2 -->
-
                 <div class="workflow-step">
 
                     <div class="workflow-icon">
@@ -772,8 +1060,6 @@ body {
                 </div>
 
 
-                <!-- STEP 3 -->
-
                 <div class="workflow-step">
 
                     <div class="workflow-icon">
@@ -786,8 +1072,6 @@ body {
 
                 </div>
 
-
-                <!-- STEP 4 -->
 
                 <div class="workflow-step">
 
@@ -809,6 +1093,7 @@ body {
     </section>
 
 
+
     <!-- ================= RETRIEVED DOCUMENTS ================= -->
 
     <section class="card-box">
@@ -822,6 +1107,7 @@ body {
             </p>
 
         </div>
+
 
         <div class="card-body-custom">
 
@@ -846,11 +1132,13 @@ body {
 
                         </div>
 
+
                         <div class="score">
                             Similarity: {{ document.score }}
                         </div>
 
                     </div>
+
 
                     <div class="document-content">
                         {{ document.content }}
@@ -873,6 +1161,8 @@ body {
 
     </section>
 
+
+
     <!-- ================= GENERATED RESOLUTION ================= -->
 
     <section class="card-box">
@@ -887,22 +1177,30 @@ body {
 
         </div>
 
+
         <div class="card-body-custom">
 
             <div class="resolution-box">
 
                 <div class="resolution-title">
+
                     <span>💡</span>
+
                     Recommended Troubleshooting Resolution
+
                 </div>
+
 
                 <div class="resolution-content">
 {{ rag_result.resolution }}
                 </div>
 
+
                 <div class="escalation">
+
                     ⚠️ If the issue persists after following the recommended steps,
                     escalate the ticket to the appropriate IT support team.
+
                 </div>
 
             </div>
@@ -910,6 +1208,212 @@ body {
         </div>
 
     </section>
+
+
+
+    <!-- =====================================================
+         MILESTONE 3
+         MULTI-AGENT WORKFLOW
+    ====================================================== -->
+
+    <section class="m3-section">
+
+
+        <!-- M3 HEADER -->
+
+        <div class="m3-header">
+
+            <h2>
+                🤖 Multi-Agent Workflow
+            </h2>
+
+            <p>
+                SupportPilot's M3 intelligent agent workflow
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= AGENTS ================= -->
+
+        <div class="m3-workflow">
+
+
+            <!-- DIAGNOSIS AGENT -->
+
+            <div class="m3-agent diagnosis">
+
+                <div class="m3-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Diagnosis Agent
+                </h3>
+
+                <span class="m3-status">
+                    {{ m3_result.diagnosis.status|upper }}
+                </span>
+
+            </div>
+
+
+
+            <!-- ARROW -->
+
+            <div class="m3-arrow">
+                →
+            </div>
+
+
+
+            <!-- RETRIEVAL AGENT -->
+
+            <div class="m3-agent retrieval">
+
+                <div class="m3-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Retrieval Agent
+                </h3>
+
+                <span class="m3-status">
+                    {{ m3_result.retrieval.status|upper }}
+                </span>
+
+            </div>
+
+
+
+            <!-- ARROW -->
+
+            <div class="m3-arrow">
+                →
+            </div>
+
+
+
+            <!-- RESOLUTION AGENT -->
+
+            <div class="m3-agent resolution">
+
+                <div class="m3-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Resolution Agent
+                </h3>
+
+                <span class="m3-status">
+                    {{ m3_result.resolution.status|upper }}
+                </span>
+
+            </div>
+
+
+
+            <!-- ARROW -->
+
+            <div class="m3-arrow">
+                →
+            </div>
+
+
+
+            <!-- VALIDATION AGENT -->
+
+            <div class="m3-agent validation">
+
+                <div class="m3-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Validation Agent
+                </h3>
+
+                <span class="m3-status">
+                    {{ m3_result.validation.status|upper }}
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= M3 RESULTS ================= -->
+
+        <div class="m3-result-grid">
+
+
+            <!-- CONFIDENCE -->
+
+            <div class="m3-result-card m3-confidence">
+
+                <span class="result-label">
+                    Confidence
+                </span>
+
+                <span class="result-value">
+                    {{ m3_result.validation.confidence }}%
+                </span>
+
+            </div>
+
+
+
+            <!-- DECISION -->
+
+            <div class="m3-result-card m3-decision">
+
+                <span class="result-label">
+                    Decision
+                </span>
+
+                <span class="result-value">
+                    {{ m3_result.validation.decision }}
+                </span>
+
+            </div>
+
+
+
+            <!-- ACTION -->
+
+            <div class="m3-result-card m3-action">
+
+                <span class="result-label">
+                    Action Status
+                </span>
+
+                <span class="result-value">
+                    {{ m3_result.action.status|upper }}
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ACTION MESSAGE -->
+
+        <div class="m3-action-message">
+
+            {{ m3_result.action.message }}
+
+        </div>
+
+
+    </section>
+
 
 
     <!-- ================= BUTTON ================= -->
@@ -923,7 +1427,8 @@ body {
     </div>
 
 
-    <!-- FOOTER -->
+
+    <!-- ================= FOOTER ================= -->
 
     <div class="footer">
 
@@ -933,6 +1438,7 @@ body {
 
 
 </main>
+
 
 </body>
 
